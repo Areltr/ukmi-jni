@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const base = document.createElement("base");
+        base.href = window.location.pathname.startsWith("/link") ? "/link/" : "./";
+        document.head.appendChild(base);
+      })();
+    </script>
+    <title>UKMI-JNI — Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --gold: #c9a84c;
+        --gold-light: #e8c97a;
+        --gold-dim: #7a5e28;
+        --bg: #0a0a0b;
+        --bg-2: #111113;
+        --bg-3: #181820;
+        --surface: rgba(255, 255, 255, 0.04);
+        --surface-hover: rgba(255, 255, 255, 0.08);
+        --border: rgba(201, 168, 76, 0.18);
+        --border-hover: rgba(201, 168, 76, 0.45);
+        --text: #f2eee6;
+        --text-dim: rgba(242, 238, 230, 0.5);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ── Background ── */
+      .bg-canvas {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .bg-canvas::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 50% at 50% 0%,
+            rgba(201, 168, 76, 0.07) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 40% 40% at 80% 80%,
+            rgba(201, 168, 76, 0.04) 0%,
+            transparent 60%
+          );
+      }
+      .grain {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        background-size: 200px 200px;
+        opacity: 0.5;
+      }
+
+      /* ── Lines decoration ── */
+      .line-h {
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold-dim),
+          transparent
+        );
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      .line-h.top {
+        top: 40px;
+      }
+      .line-h.bot {
+        bottom: 40px;
+      }
+      .line-v {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          var(--gold-dim),
+          transparent
+        );
+        opacity: 0.2;
+        pointer-events: none;
+      }
+      .line-v.left {
+        left: 40px;
+      }
+      .line-v.right {
+        right: 40px;
+      }
+
+      /* ── Main wrapper ── */
+      .wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 480px;
+        padding: 60px 24px 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+
+      /* ── Header ── */
+      .avatar-ring {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 28px;
+        animation: fadeUp 0.8s ease both;
+      }
+      .avatar-ring::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 168, 76, 0.12);
+      }
+      .avatar-ring::after {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 168, 76, 0.05);
+      }
+      .avatar-inner {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: var(--bg-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 0.05em;
+      }
+
+      .brand {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 38px;
+        font-weight: 300;
+        letter-spacing: 0.18em;
+        color: var(--text);
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        animation: fadeUp 0.8s 0.1s ease both;
+      }
+      .brand span {
+        color: var(--gold);
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 16px 0 12px;
+        width: 100%;
+        animation: fadeUp 0.8s 0.2s ease both;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--border));
+      }
+      .divider::after {
+        background: linear-gradient(90deg, var(--border), transparent);
+      }
+      .divider-ornament {
+        color: var(--gold-dim);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+      }
+
+      .tagline {
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        text-align: center;
+        margin-bottom: 44px;
+        animation: fadeUp 0.8s 0.25s ease both;
+      }
+
+      /* ── Links ── */
+      .links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .link-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        text-decoration: none;
+        color: var(--text);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition:
+          background 0.3s ease,
+          border-color 0.3s ease,
+          transform 0.25s ease;
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+      }
+      .link-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .link-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(201, 168, 76, 0.06) 0%,
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .link-item:hover {
+        background: var(--surface-hover);
+        border-color: var(--border-hover);
+        transform: translateX(3px);
+      }
+      .link-item:hover::before {
+        opacity: 1;
+      }
+      .link-item:hover::after {
+        opacity: 1;
+      }
+      .link-item:active {
+        transform: translateX(3px) scale(0.99);
+      }
+
+      .link-icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 3px;
+        background: rgba(201, 168, 76, 0.08);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        position: relative;
+        z-index: 1;
+        transition: background 0.3s ease;
+      }
+      .link-item:hover .link-icon {
+        background: rgba(201, 168, 76, 0.14);
+      }
+
+      .link-text {
+        flex: 1;
+        position: relative;
+        z-index: 1;
+      }
+      .link-title {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: var(--text);
+        display: block;
+        transition: color 0.3s ease;
+      }
+      .link-item:hover .link-title {
+        color: var(--gold-light);
+      }
+
+      .link-desc {
+        font-size: 11px;
+        color: var(--text-dim);
+        letter-spacing: 0.06em;
+        display: block;
+        margin-top: 2px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      .link-arrow {
+        color: var(--gold-dim);
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+        transition:
+          transform 0.25s ease,
+          color 0.3s ease;
+      }
+      .link-item:hover .link-arrow {
+        transform: translateX(3px);
+        color: var(--gold);
+      }
+
+      /* ── Section separator ── */
+      .section-label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 4px;
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+      }
+      .section-label-text {
+        font-size: 9px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold-dim);
+        white-space: nowrap;
+        font-weight: 400;
+      }
+      .section-label-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--border), transparent);
+      }
+
+      /* ── Footer ── */
+      .footer {
+        margin-top: 48px;
+        text-align: center;
+        animation: fadeUp 0.8s 0.9s ease both;
+      }
+      .footer-ornament {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: var(--gold-dim);
+        letter-spacing: 0.2em;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .footer-text {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        opacity: 0.5;
+      }
+
+      /* ── Animations ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Stagger for links */
+      .link-item:nth-child(1) {
+        animation-delay: 0.35s;
+      }
+      .link-item:nth-child(2) {
+        animation-delay: 0.42s;
+      }
+      .link-item:nth-child(3) {
+        animation-delay: 0.49s;
+      }
+      .link-item:nth-child(4) {
+        animation-delay: 0.56s;
+      }
+      .link-item:nth-child(5) {
+        animation-delay: 0.63s;
+      }
+      .link-item:nth-child(6) {
+        animation-delay: 0.7s;
+      }
+      .section-label:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+      .section-label:nth-child(4) {
+        animation-delay: 0.53s;
+      }
+      .section-label:nth-child(7) {
+        animation-delay: 0.67s;
+      }
+
+      /* ── Scrollbar ── */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--gold-dim);
+        border-radius: 2px;
+      }
+
+      /* ── Ripple ── */
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: rippleAnim 0.5s linear;
+        background: rgba(201, 168, 76, 0.15);
+        pointer-events: none;
+      }
+      @keyframes rippleAnim {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .line-v {
+          display: none;
+        }
+        .line-h.top {
+          top: 16px;
+        }
+        .line-h.bot {
+          bottom: 16px;
+        }
+        .wrapper {
+          padding: 48px 16px 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-canvas"><div class="grain"></div></div>
+    <div class="line-h top"></div>
+    <div class="line-h bot"></div>
+    <div class="line-v left"></div>
+    <div class="line-v right"></div>
+
+    <main class="wrapper">
+      <div class="avatar-ring">
+        <img
+          class="avatar-inner"
+          src="./assets/logo-ukmi.png?v=20260513-1"
+          alt="UKMI-JNI Logo"
+        />
+      </div>
+
+      <h1 class="brand">UKMI<span>—</span>JNI</h1>
+
+      <div class="divider">
+        <span class="divider-ornament">✦</span>
+      </div>
+
+      <p class="tagline">
+        Unit Kegiatan Mahasiswa Islam · Jama'ah Nurul Iman INSTIPER Yogyakarta
+      </p>
+
+      <div class="links" id="linksContainer">
+        <!-- Sosial Media -->
+        <div class="section-label">
+          <span class="section-label-text">Sosial Media</span>
+          <span class="section-label-line"></span>
+        </div>
+
+        <a
+          class="link-item"
+          href="https://www.instagram.com/ukmi_jni?igsh=MXN6b3I0MGp3c3RibQ=="
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="link-icon" src="./assets/icon-ig.png?v=20260513-1" alt="Instagram" />
+          <div class="link-text">
+            <span class="link-title">Instagram</span>
+            <span class="link-desc">Dokumentasi Kegiatan</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a
+          class="link-item"
+          href="https://www.tiktok.com/@ukmijni.instiper?_r=1&_t=ZS-97uWLjKaAoG"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="link-icon" src="./assets/icon-tt.png?v=20260513-1" alt="Tiktok" />
+          <div class="link-text">
+            <span class="link-title">Tiktok</span>
+            <span class="link-desc">Konten Singkat Kajian</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a
+          class="link-item"
+          href="https://youtube.com/@ukmijniinstiperyogyakarta443?si=t4BFi0KI7AoBhDlq"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="link-icon" src="./assets/icon-yt.png?v=20260513-1" alt="YouTube" />
+          <div class="link-text">
+            <span class="link-title">YouTube</span>
+            <span class="link-desc">Ceramah & Kajian</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <!-- Informasi -->
+        <div class="section-label">
+          <span class="section-label-text">Informasi</span>
+          <span class="section-label-line"></span>
+        </div>
+
+        <a
+          class="link-item"
+          href="https://wa.me/6285213468030"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="link-icon" src="./assets/icon-wa.png?v=20260513-1" alt="WhatsApp" />
+          <div class="link-text">
+            <span class="link-title">WhatsApp</span>
+            <span class="link-desc">Hubungi Kami</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <!-- <a class="link-item" href="#" target="_blank" rel="noopener">
+          <div class="link-icon">📋</div>
+          <div class="link-text">
+            <span class="link-title">Formulir Pendaftaran</span>
+            <span class="link-desc">Daftar Anggota Baru</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a> -->
+
+        <!-- Lainnya -->
+        <div class="section-label">
+          <span class="section-label-text">Lainnya</span>
+          <span class="section-label-line"></span>
+        </div>
+
+        <a class="link-item" href="https://ukmi-jni.web.id" target="_blank" rel="noopener">
+          <img
+            class="link-icon"
+            src="./assets/icon-web.png?v=20260513-1"
+            alt="Website Resmi"
+          />
+          <div class="link-text">
+            <span class="link-title">Website Resmi</span>
+            <span class="link-desc">Profil & Kegiatan</span>
+          </div>
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+      <!-- /links -->
+
+      <footer class="footer">
+        <span class="footer-ornament">✦ ✦ ✦</span>
+        <p class="footer-text">UKMI-JNI &nbsp;·&nbsp; 2026</p>
+      </footer>
+    </main>
+
+    <script>
+      document.querySelectorAll(".link-item").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const ripple = document.createElement("span");
+          ripple.classList.add("ripple");
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          ripple.style.width = ripple.style.height = size + "px";
+          ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+          ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+          this.appendChild(ripple);
+          setTimeout(() => ripple.remove(), 600);
+        });
+      });
+    </script>
+  </body>
+</html>
