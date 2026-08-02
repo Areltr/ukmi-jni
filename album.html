@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumentasi & Galeri – UKMI Jama'ah Nurul Iman</title>
+  <meta name="description" content="Galeri foto dan dokumentasi kegiatan UKMI JNI — dari kajian, pelatihan kader, bakti sosial, hingga festival Ramadhan dan berbagai momen berharga." />
+  <meta property="og:title" content="Galeri UKMI Jama'ah Nurul Iman" />
+  <meta property="og:description" content="Kumpulan momen berharga dalam perjalanan dakwah UKMI JNI." />
+  <meta property="og:image" content="https://placehold.co/1200x630/ea580c/ffffff?text=Galeri+UKMI+JNI" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .section-badge { background: linear-gradient(90deg, #ea580c, #f97316); }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #fed7aa; }
+    .gallery-item { overflow: hidden; border-radius: 1rem; position: relative; cursor: pointer; }
+    .gallery-item img { transition: transform 0.4s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item .overlay { opacity: 0; transition: opacity 0.3s; position: absolute; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: flex-end; padding: 1rem; border-radius: 1rem; }
+    .gallery-item:hover .overlay { opacity: 1; }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      var isHidden = menu.style.display === 'none' || menu.style.display === '';
+      menu.style.display = isHidden ? 'block' : 'none';
+      iconOpen.style.display = isHidden ? 'none' : 'block';
+      iconClose.style.display = isHidden ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body class="bg-orange-50 text-slate-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-orange-600 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+          <div><div class="text-white font-bold text-base leading-tight">UKMI JNI</div><div class="text-orange-200 text-xs">Jama'ah Nurul Iman</div></div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-orange-100 text-sm">Beranda</a>
+          <a href="about.html" class="nav-link text-orange-100 text-sm">Tentang</a>
+          <a href="program.html" class="nav-link text-orange-100 text-sm">Program</a>
+          <a href="album.html" class="nav-link text-white font-semibold text-sm border-b-2 border-white pb-0.5">Dokumentasi</a>
+          <a href="struktur.html" class="nav-link text-orange-100 text-sm">Struktur</a>
+          <a href="kontak.html" class="bg-white text-orange-600 font-semibold text-sm px-4 py-2 rounded-full hover:bg-orange-50 transition">Kontak</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden text-white p-2">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" style="display:none;" class="md:hidden bg-orange-700 px-4 pb-4 pt-2 space-y-2">
+      <a href="index.html" class="block text-orange-100 py-2 border-b border-orange-500">Beranda</a>
+      <a href="about.html" class="block text-orange-100 py-2 border-b border-orange-500">Tentang</a>
+      <a href="program.html" class="block text-orange-100 py-2 border-b border-orange-500">Program</a>
+      <a href="album.html" class="block text-white font-semibold py-2 border-b border-orange-500">Dokumentasi</a>
+      <a href="struktur.html" class="block text-orange-100 py-2 border-b border-orange-500">Struktur</a>
+      <a href="kontak.html" class="block text-orange-100 py-2">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-500 py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm px-4 py-2 rounded-full mb-4">📸 Kenangan & Momen</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Galeri Dokumentasi</h1>
+      <p class="text-orange-100 text-lg">Setiap foto menyimpan cerita, setiap momen adalah amanah dakwah</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="bg-white shadow-sm sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex overflow-x-auto gap-2 py-3">
+        <button onclick="setTab('semua',this)" id="tab-semua" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 bg-orange-600 text-white">Semua</button>
+        <button onclick="setTab('kader',this)" id="tab-kader" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Kader</button>
+        <button onclick="setTab('syiar',this)" id="tab-syiar" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Syiar</button>
+        <button onclick="setTab('humas',this)" id="tab-humas" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Humas</button>
+        <button onclick="setTab('medcen',this)" id="tab-medcen" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Medcen</button>
+        <button onclick="setTab('danus',this)" id="tab-danus" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Danus</button>
+        <button onclick="setTab('minbat',this)" id="tab-minbat" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Minbat</button>
+        <button onclick="setTab('keputrian',this)" id="tab-keputrian" class="px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 text-slate-500 hover:bg-orange-50">Keputrian</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="bg-orange-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="gallery-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;"></div>
+      <p id="gallery-empty" style="display:none;text-align:center;color:#9ca3af;padding:40px 0;font-size:14px;">Belum ada foto untuk kategori ini.</p>
+    </div>
+  </section>
+
+  <script>
+  var galleryDataLama = [
+    { cat:'kajian',   emoji:'\ud83d\udcd6', label:'Kajian',   bg:'#7c2d12', title:'Halaqah Al-Qur\u02bcaan Mingguan',      sub:'Setiap Sabtu bersama ustadz bersertifikat' },
+    { cat:'lkmi',     emoji:'\ud83c\udf31', label:'LKMI',     bg:'#14532d', title:'LKMI Angkatan XVIII',                    sub:'Pembentukan kader penggerak dakwah kampus' },
+    { cat:'ramadhan', emoji:'\ud83c\udf19', label:'Ramadhan', bg:'#1e1b4b', title:'Ifthar Jama\u02bcai Ramadhan 2025',      sub:'Buka puasa bersama seluruh anggota JNI' },
+    { cat:'sosial',   emoji:'\ud83e\udd1d', label:'Sosial',   bg:'#7c3aed', title:'Bakti Sosial Akhir Semester',            sub:'Sembako dan santunan anak yatim' },
+    { cat:'rihlah',   emoji:'\u26fa',        label:'Rihlah',   bg:'#0f4c75', title:'Rihlah Ilmiah ke Pesantren',            sub:'Kunjungan belajar dan refleksi spiritual' },
+    { cat:'kajian',   emoji:'\ud83c\udfa4', label:'Kajian',   bg:'#831843', title:'Kajian Tematik: Fiqh Muamalah',         sub:'Diskusi hukum Islam kontemporer' },
+    { cat:'lkmi',     emoji:'\ud83d\udca1', label:'LKMI',     bg:'#134e4a', title:'Foto Bersama Keluarga JNI',             sub:'Kenangan indah bersama pengurus 2025' },
+    { cat:'ramadhan', emoji:'\ud83d\udd4c', label:'Ramadhan', bg:'#312e81', title:'I\u02bcatikaf 10 Malam Terakhir',        sub:'Ibadah intensif di masjid kampus' },
+    { cat:'kajian',   emoji:'\ud83c\udfc6', label:'Kajian',   bg:'#7f1d1d', title:'Olimpiade Islam Kampus 2024',            sub:'MTQ, kaligrafi, cerdas cermat Islam' },
+    { cat:'sosial',   emoji:'\u2764\ufe0f', label:'Sosial',   bg:'#78350f', title:'Santunan Anak Yatim',                   sub:'Berbagi kebahagiaan bersama anak yatim' },
+    { cat:'sosial',   emoji:'\ud83d\udcda', label:'Sosial',   bg:'#1c4532', title:'Bimbel Gratis Anak Dhuafa',             sub:'Pengajaran rutin setiap Ahad pagi' },
+    { cat:'ramadhan', emoji:'\ud83d\udcd6', label:'Ramadhan', bg:'#1e3a5f', title:'Khataman Al-Qur\u02bcaan Bersama',      sub:'Menjelang akhir Ramadhan penuh berkah' },
+    { cat:'lkmi',     emoji:'\u26fa',        label:'LKMI',     bg:'#3b1f6e', title:'Outbound & Team Building',               sub:'Mempererat ukhuwah kader JNI' },
+    { cat:'rihlah',   emoji:'\ud83c\udf3f', label:'Rihlah',   bg:'#14532d', title:'Kampus Hijau Islam',                    sub:'Penanaman pohon dan bersih lingkungan' },
+    { cat:'kajian',   emoji:'\ud83d\udcdc', label:'Kajian',   bg:'#4a1942', title:'Kajian Sirah Nabawiyah',                sub:'Mengenal perjalanan hidup Rasulullah SAW' },
+    { cat:'sosial',   emoji:'\ud83c\udf3e', label:'Sosial',   bg:'#713f12', title:'Pembagian Sembako Ramadhan',            sub:'Membantu keluarga prasejahtera' },
+  ];
+
+  var galleryData = [
+    { cat:'kader', emoji:'🌙', label:'Kader', bg:'#9a3412', title:'Mabit Ikhwan', sub:'Malam bina iman untuk penguatan ruhiyah dan ukhuwah kader' },
+    { cat:'kader', emoji:'📣', label:'Kader', bg:'#c2410c', title:'PMDK 1 & 2', sub:'Penerimaan dan pembinaan mahasiswa dakwah kampus' },
+    { cat:'syiar', emoji:'📖', label:'Syiar', bg:'#166534', title:'Tahsin Al-Qur’an', sub:'Belajar membaca Al-Qur’an dengan baik dan benar' },
+    { cat:'syiar', emoji:'🎙️', label:'Syiar', bg:'#15803d', title:'Kajian Rutin', sub:'Kajian keislaman untuk mahasiswa setiap pekan' },
+    { cat:'humas', emoji:'🤲', label:'Humas', bg:'#1d4ed8', title:'Bakti Sosial', sub:'Aksi kepedulian untuk masyarakat sekitar' },
+    { cat:'humas', emoji:'🚶', label:'Humas', bg:'#2563eb', title:'JJB (Jalan-jalan Berilmu)', sub:'Kebersamaan anggota yang memadukan rekreasi dan wawasan' },
+    { cat:'medcen', emoji:'📱', label:'Medcen', bg:'#7e22ce', title:'Pengelolaan Media Sosial', sub:'Dokumentasi dan konten dakwah kreatif UKMI' },
+    { cat:'medcen', emoji:'🖌️', label:'Medcen', bg:'#9333ea', title:'Training Desain', sub:'Pelatihan keterampilan desain bagi anggota' },
+    { cat:'danus', emoji:'🧥', label:'Danus', bg:'#a16207', title:'Pembuatan Jaket UKMI', sub:'Produksi jaket identitas organisasi' },
+    { cat:'danus', emoji:'💐', label:'Danus', bg:'#ca8a04', title:'Bouquet Wisuda', sub:'Usaha kreatif untuk mendukung dana kegiatan UKMI' },
+    { cat:'minbat', emoji:'🏆', label:'Minbat', bg:'#0f766e', title:'UKMI Cup', sub:'Kompetisi olahraga dan kebersamaan anggota' },
+    { cat:'minbat', emoji:'🏹', label:'Minbat', bg:'#0d9488', title:'Panahan', sub:'Latihan olahraga sunnah untuk anggota UKMI' },
+    { cat:'keputrian', emoji:'🧕', label:'Keputrian', bg:'#be185d', title:'GEMAR', sub:'Gerakan Menutup Aurat bagi muslimah kampus' },
+    { cat:'keputrian', emoji:'💬', label:'Keputrian', bg:'#db2777', title:'Mentoring Anggota', sub:'Ruang pendampingan dan berbagi untuk anggota akhwat' },
+  ];
+
+  function renderGallery(cat) {
+    var filtered = cat === 'semua' ? galleryData : galleryData.filter(function(d){ return d.cat === cat; });
+    var grid = document.getElementById('gallery-grid');
+    var empty = document.getElementById('gallery-empty');
+    grid.innerHTML = '';
+    if (filtered.length === 0) {
+      grid.style.display = 'none'; empty.style.display = 'block'; return;
+    }
+    grid.style.display = 'grid'; empty.style.display = 'none';
+    filtered.forEach(function(item) {
+      var card = document.createElement('div');
+      card.style.cssText = 'border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;';
+      card.onmouseover = function(){ this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.13)'; };
+      card.onmouseout  = function(){ this.style.transform='translateY(0)';    this.style.boxShadow='0 2px 8px rgba(0,0,0,0.07)'; };
+      card.innerHTML =
+        '<div style="height:180px;background:'+item.bg+';display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;">'+
+          '<span style="font-size:52px;line-height:1;">'+item.emoji+'</span>'+
+          '<span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:2px;">'+item.label+'</span>'+
+          '<div style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.15);border-radius:999px;padding:3px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.9);">📷 Foto</div>'+
+        '</div>'+
+        '<div style="padding:14px 16px;">'+
+          '<p style="font-weight:700;color:#1e293b;font-size:14px;margin:0 0 4px;">'+item.title+'</p>'+
+          '<p style="color:#64748b;font-size:12px;margin:0;">'+item.sub+'</p>'+
+        '</div>';
+      grid.appendChild(card);
+    });
+  }
+
+  function setTab(name, btn) {
+    var tabs = document.querySelectorAll('[id^="tab-"]');
+    tabs.forEach(function(t){ t.classList.remove('bg-orange-600','text-white'); t.classList.add('text-slate-500'); });
+    btn.classList.add('bg-orange-600','text-white'); btn.classList.remove('text-slate-500');
+    renderGallery(name);
+  }
+
+  renderGallery('semua');
+  </script>
+
+  <!-- VIDEO HIGHLIGHT -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">Video</div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Highlight Video</h2>
+        <p class="text-slate-500">Saksikan momen-momen terbaik perjalanan UKMI JNI dalam video</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="aspect-video bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center relative">
+            <div class="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">3:24</span>
+          </div>
+          <div class="p-4">
+            <h4 class="font-bold text-slate-800 mb-1">Aftermovie Mabit Ikhwan</h4>
+            <p class="text-slate-500 text-sm">Malam bina iman untuk mempererat ruhiyah dan ukhuwah kader</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="aspect-video bg-gradient-to-br from-green-700 to-green-900 flex items-center justify-center relative">
+            <div class="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">5:12</span>
+          </div>
+          <div class="p-4">
+            <h4 class="font-bold text-slate-800 mb-1">Highlight Kajian Rutin</h4>
+            <p class="text-slate-500 text-sm">Momen kajian keislaman bersama mahasiswa kampus</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative">
+            <div class="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded">2:48</span>
+          </div>
+          <div class="p-4">
+            <h4 class="font-bold text-slate-800 mb-1">UKMI Cup</h4>
+            <p class="text-slate-500 text-sm">Kompetisi olahraga untuk kebersamaan dan sportivitas anggota</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-800 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-lg"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+            <div><div class="font-bold text-lg">UKMI JNI</div><div class="text-green-300 text-sm">Jama'ah Nurul Iman</div></div>
+          </div>
+          <p class="text-green-300 text-sm leading-relaxed max-w-xs">Organisasi mahasiswa Islam yang berkomitmen mencetak generasi unggul berakhlak mulia untuk kemajuan umat dan bangsa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Navigasi</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="program.html" class="hover:text-white transition">Program Kerja</a></li>
+            <li><a href="album.html" class="hover:text-white transition">Dokumentasi</a></li>
+            <li><a href="struktur.html" class="hover:text-white transition">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Kontak</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li>📧 jni@kampus.ac.id</li>
+            <li>📱 +62 812-3456-7890</li>
+            <li>📍 Gedung UKM Lt. 2, Kampus Utama</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-green-400 text-sm">© 2025 UKMI Jama'ah Nurul Iman. Hak Cipta Dilindungi.</p>
+        <p class="text-green-500 text-xs">Semoga Allah merahmati setiap langkah dakwah kita.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

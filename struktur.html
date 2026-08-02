@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktur Kepengurusan – UKMI Jama'ah Nurul Iman</title>
+  <meta name="description" content="Kenali pengurus dan divisi UKMI JNI — dari ketua umum, sekretaris, bendahara, hingga seluruh divisi yang menggerakkan organisasi." />
+  <meta property="og:title" content="Struktur Kepengurusan UKMI JNI" />
+  <meta property="og:description" content="Susunan pengurus dan divisi UKMI Jama'ah Nurul Iman periode 2024–2025." />
+  <meta property="og:image" content="https://placehold.co/1200x630/16a34a/ffffff?text=Struktur+UKMI+JNI" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .section-badge { background: linear-gradient(90deg, #ea580c, #f97316); }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #fed7aa; }
+    .pengurus-card { transition: transform 0.3s, box-shadow 0.3s; }
+    .pengurus-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      var isHidden = menu.style.display === 'none' || menu.style.display === '';
+      menu.style.display = isHidden ? 'block' : 'none';
+      iconOpen.style.display = isHidden ? 'none' : 'block';
+      iconClose.style.display = isHidden ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body class="bg-orange-50 text-slate-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-orange-600 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+          <div><div class="text-white font-bold text-base leading-tight">UKMI JNI</div><div class="text-orange-200 text-xs">Jama'ah Nurul Iman</div></div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-orange-100 text-sm">Beranda</a>
+          <a href="about.html" class="nav-link text-orange-100 text-sm">Tentang</a>
+          <a href="program.html" class="nav-link text-orange-100 text-sm">Program</a>
+          <a href="album.html" class="nav-link text-orange-100 text-sm">Dokumentasi</a>
+          <a href="struktur.html" class="nav-link text-white font-semibold text-sm border-b-2 border-white pb-0.5">Struktur</a>
+          <a href="kontak.html" class="bg-white text-orange-600 font-semibold text-sm px-4 py-2 rounded-full hover:bg-orange-50 transition">Kontak</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden text-white p-2">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" style="display:none;" class="md:hidden bg-orange-700 px-4 pb-4 pt-2 space-y-2">
+      <a href="index.html" class="block text-orange-100 py-2 border-b border-orange-500">Beranda</a>
+      <a href="about.html" class="block text-orange-100 py-2 border-b border-orange-500">Tentang</a>
+      <a href="program.html" class="block text-orange-100 py-2 border-b border-orange-500">Program</a>
+      <a href="album.html" class="block text-orange-100 py-2 border-b border-orange-500">Dokumentasi</a>
+      <a href="struktur.html" class="block text-white font-semibold py-2 border-b border-orange-500">Struktur</a>
+      <a href="kontak.html" class="block text-orange-100 py-2">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-slate-800 via-green-900 to-green-800 py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm px-4 py-2 rounded-full mb-4">🏛️ Kepengurusan</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Struktur Organisasi</h1>
+      <p class="text-green-200 text-lg">Susunan pengurus UKMI JNI periode 2026–2027</p>
+    </div>
+  </section>
+
+  <!-- PIMPINAN UTAMA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">Pimpinan</div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Pengurus Inti</h2>
+        <p class="text-slate-500">Mereka yang memimpin dan menggerakkan organisasi</p>
+      </div>
+
+      <!-- Ketua Umum -->
+      <div class="flex justify-center mb-8">
+        <div class="pengurus-card bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl p-8 text-center text-white w-72 shadow-lg">
+          <div class="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">👨‍💼</div>
+          <div class="text-xs font-bold bg-white/20 px-3 py-1 rounded-full inline-block mb-3">Ketua Umum</div>
+          <h3 class="text-xl font-bold mb-1"> Muhammad Aidil Priono</h3>
+        </div>
+      </div>
+
+      <!-- Wakil & Sekretaris & Bendahara -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="pengurus-card bg-orange-50 rounded-2xl p-6 text-center border border-orange-100">
+          <div class="w-20 h-20 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">👨‍💼</div>
+          <div class="text-xs font-bold bg-orange-600 text-white px-3 py-1 rounded-full inline-block mb-3">Wakil Ketua</div>
+          <h3 class="font-bold text-slate-800 mb-1">Muhammad Rizky</h3>
+        </div>
+        <div class="pengurus-card bg-green-50 rounded-2xl p-6 text-center border border-green-100">
+          <div class="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">👨‍💼</div>
+          <div class="text-xs font-bold bg-green-800 text-white px-3 py-1 rounded-full inline-block mb-3">Sekretaris Umum</div>
+          <h3 class="font-bold text-slate-800 mb-1">Eko Gunawan</h3>
+        </div>
+        <div class="pengurus-card bg-orange-50 rounded-2xl p-6 text-center border border-orange-100">
+          <div class="w-20 h-20 bg-orange-100 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">👩‍💼</div>
+          <div class="text-xs font-bold bg-orange-600 text-white px-3 py-1 rounded-full inline-block mb-3">Bendahara Umum</div>
+          <h3 class="font-bold text-slate-800 mb-1">Nayla Azzahra</h3>
+        </div>
+        <div class="pengurus-card bg-green-50 rounded-2xl p-6 text-center border border-green-100 md:col-start-2">
+          <div class="w-20 h-20 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">👨‍💼</div>
+          <div class="text-xs font-bold bg-green-800 text-white px-3 py-1 rounded-full inline-block mb-3">Biro Kesekretariatan</div>
+          <h3 class="font-bold text-slate-800 mb-1">Arif Dwiyanto</h3>
+        </div>
+      </div>
+
+      <!-- DIVISI-DIVISI -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">Divisi</div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Divisi & Bidang</h2>
+        <p class="text-slate-500">7 bidang yang menjalankan program-program strategis UKMI JNI</p>
+      </div>
+      <div id="bidang-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <script>
+        var bidangOrganisasi = [
+          { nama:'Kaderisasi', icon:'🤝', color:'#ea580c', bg:'#fff7ed', kepala:'Al Fajri Nuzulhuda Siregar', program:'Mabit Ikhwan, PMDK 1 & 2, Magang Anggota Baru', desc:'Menyiapkan dan membina anggota melalui proses kaderisasi yang terarah.' },
+          { nama:'Syiar', icon:'📢', color:'#15803d', bg:'#f0fdf4', kepala:'Ridando Surya Ramadhan', program:'Tahsin Al-Qur’an, Kajian Rutin, Hari Besar Islam', desc:'Menguatkan syiar Islam melalui pembelajaran, kajian, dan kegiatan keagamaan.' },
+          { nama:'Hubungan Masyarakat', icon:'🌐', color:'#2563eb', bg:'#eff6ff', kepala:'Andri Ramadhani', program:'Bakti Sosial, JJB, Silaturahmi LDK', desc:'Membangun relasi, kolaborasi, dan kepedulian sosial UKMI.' },
+          { nama:'Media Center', icon:'🎨', color:'#7e22ce', bg:'#faf5ff', kepala:'Arel', program:'Media Sosial, Training Desain, Website Organisasi', desc:'Mengelola komunikasi visual, dokumentasi, dan informasi digital organisasi.' },
+          { nama:'Dana Usaha', icon:'💼', color:'#a16207', bg:'#fefce8', kepala:' Rafly Ichsan vega', program:'Jaket UKMI, Baju Polo, Bouquet Wisuda', desc:'Mengembangkan usaha kreatif untuk mendukung kemandirian dana kegiatan.' },
+          { nama:'Minat & Bakat', icon:'⚽', color:'#0f766e', bg:'#f0fdfa', kepala:'Muhammad Aziz Al-Hisyam', program:'UKMI Cup, Panahan, Resik-resik Masjid', desc:'Memfasilitasi minat, bakat, olahraga, dan kegiatan kebersamaan anggota.' },
+          { nama:'Keputrian', icon:'🌸', color:'#db2777', bg:'#fdf2f8', kepala:'Indie Arsyta', program:'GEMAR, Mentoring Anggota, Review Buku', desc:'Mendampingi pengembangan muslimah melalui pembinaan dan kegiatan keputrian.' }
+        ];
+
+        document.getElementById('bidang-grid').innerHTML = bidangOrganisasi.map(function(bidang, index) {
+          var posisiTerakhir = index === bidangOrganisasi.length - 1 ? ' lg:col-start-2' : '';
+          return '<div class="rounded-2xl p-6 border shadow-sm hover:shadow-md transition'+posisiTerakhir+'" style="background:'+bidang.bg+';border-color:'+bidang.color+'33;">'
+            + '<div class="flex items-center gap-3 mb-4"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style="background:'+bidang.color+'22;">'+bidang.icon+'</div>'
+            + '<div><div class="text-xs font-bold uppercase tracking-wide" style="color:'+bidang.color+';">Bidang</div><h3 class="font-bold text-slate-800">'+bidang.nama+'</h3></div></div>'
+            + '<p class="text-slate-500 text-sm mb-3">'+bidang.desc+'</p>'
+            + '<div class="rounded-lg px-3 py-3 mb-3" style="background:#ffffffaa;"><div class="text-xs font-bold mb-1" style="color:'+bidang.color+';">Program Utama</div><div class="text-sm font-semibold text-slate-700">'+bidang.program+'</div></div>'
+            + '<div class="flex items-center gap-2 rounded-lg px-3 py-2" style="background:#ffffffaa;"><span class="text-base">👤</span><div><div class="text-xs text-slate-400">Kepala Bidang</div><div class="text-sm font-semibold text-slate-700">'+bidang.kepala+'</div></div></div></div>';
+        }).join('');
+      </script>
+
+      <!-- Bagan Struktur Sederhana -->
+      <div class="mt-16 bg-slate-50 rounded-3xl p-8 border border-slate-100">
+        <h3 class="text-center text-xl font-bold text-slate-800 mb-8">Bagan Hierarki Organisasi</h3>
+        <div class="flex flex-col items-center gap-0">
+          <!-- Pembina -->
+          <div class="bg-green-800 text-white px-8 py-3 rounded-xl font-bold text-sm text-center">Pembina / Dewan Penasehat</div>
+          <div class="w-0.5 h-6 bg-slate-300"></div>
+          <!-- Ketua -->
+          <div class="bg-orange-600 text-white px-8 py-3 rounded-xl font-bold text-sm text-center">Ketua Umum</div>
+          <div class="w-0.5 h-6 bg-slate-300"></div>
+          <!-- Wakil, Sekretaris, Bendahara -->
+          <div class="flex items-start gap-6">
+            <div class="flex flex-col items-center">
+              <div class="bg-orange-100 border border-orange-300 text-orange-800 px-5 py-2 rounded-lg font-semibold text-sm text-center">Wakil Ketua</div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-slate-100 border border-slate-300 text-slate-700 px-5 py-2 rounded-lg font-semibold text-sm text-center">Sekretaris</div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-slate-100 border border-slate-300 text-slate-700 px-5 py-2 rounded-lg font-semibold text-sm text-center">Bendahara</div>
+            </div>
+          </div>
+          <div class="w-0.5 h-6 bg-slate-300"></div>
+          <!-- Divisi -->
+          <div class="bg-green-100 border border-green-300 text-green-800 px-6 py-2 rounded-lg font-semibold text-sm text-center">7 Bidang Organisasi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-800 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-lg"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+            <div><div class="font-bold text-lg">UKMI JNI</div><div class="text-green-300 text-sm">Jama'ah Nurul Iman</div></div>
+          </div>
+          <p class="text-green-300 text-sm leading-relaxed max-w-xs">Organisasi mahasiswa Islam yang berkomitmen mencetak generasi unggul berakhlak mulia untuk kemajuan umat dan bangsa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Navigasi</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="program.html" class="hover:text-white transition">Program Kerja</a></li>
+            <li><a href="album.html" class="hover:text-white transition">Dokumentasi</a></li>
+            <li><a href="struktur.html" class="hover:text-white transition">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Kontak</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li>📧 ukmijni98@gmail.com</li>
+            <li>📱 +62 822-8663-0659</li>
+            <li>📍 Gedung SC Lt. 2 INSTIPER Yogyakarta</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-green-400 text-sm">© 2026 UKMI Jama'ah Nurul Iman. Hak Cipta Dilindungi.</p>
+        <p class="text-green-500 text-xs">Semoga Allah merahmati setiap langkah dakwah kita.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

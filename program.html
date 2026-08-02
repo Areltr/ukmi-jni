@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Kerja – UKMI Jama'ah Nurul Iman</title>
+  <meta name="description" content="Lihat seluruh program kerja UKMI JNI mulai dari kajian rutin, pelatihan kader, bakti sosial, hingga festival ramadhan yang menjadi agenda unggulan." />
+  <meta property="og:title" content="Program Kerja UKMI JNI" />
+  <meta property="og:description" content="Program kerja UKMI Jama'ah Nurul Iman yang dirancang untuk pembinaan mahasiswa muslim secara komprehensif." />
+  <meta property="og:image" content="https://placehold.co/1200x630/16a34a/ffffff?text=Program+UKMI+JNI" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .section-badge { background: linear-gradient(90deg, #ea580c, #f97316); }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #fed7aa; }
+    .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.1); }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      var isHidden = menu.style.display === 'none' || menu.style.display === '';
+      menu.style.display = isHidden ? 'block' : 'none';
+      iconOpen.style.display = isHidden ? 'none' : 'block';
+      iconClose.style.display = isHidden ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body class="bg-orange-50 text-slate-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-orange-600 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+          <div><div class="text-white font-bold text-base leading-tight">UKMI JNI</div><div class="text-orange-200 text-xs">Jama'ah Nurul Iman</div></div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-orange-100 text-sm">Beranda</a>
+          <a href="about.html" class="nav-link text-orange-100 text-sm">Tentang</a>
+          <a href="program.html" class="nav-link text-white font-semibold text-sm border-b-2 border-white pb-0.5">Program</a>
+          <a href="album.html" class="nav-link text-orange-100 text-sm">Dokumentasi</a>
+          <a href="struktur.html" class="nav-link text-orange-100 text-sm">Struktur</a>
+          <a href="kontak.html" class="bg-white text-orange-600 font-semibold text-sm px-4 py-2 rounded-full hover:bg-orange-50 transition">Kontak</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden text-white p-2">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" style="display:none;" class="md:hidden bg-orange-700 px-4 pb-4 pt-2 space-y-2">
+      <a href="index.html" class="block text-orange-100 py-2 border-b border-orange-500">Beranda</a>
+      <a href="about.html" class="block text-orange-100 py-2 border-b border-orange-500">Tentang</a>
+      <a href="program.html" class="block text-white font-semibold py-2 border-b border-orange-500">Program</a>
+      <a href="album.html" class="block text-orange-100 py-2 border-b border-orange-500">Dokumentasi</a>
+      <a href="struktur.html" class="block text-orange-100 py-2 border-b border-orange-500">Struktur</a>
+      <a href="kontak.html" class="block text-orange-100 py-2">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-green-900 via-green-800 to-orange-700 py-20 text-center relative overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm px-4 py-2 rounded-full mb-4">📋 Rencana & Agenda</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Program Kerja</h1>
+      <p class="text-green-100 text-lg">Serangkaian program strategis untuk pembinaan mahasiswa muslim yang komprehensif</p>
+    </div>
+  </section>
+
+  <!-- PROGRAM TAHUNAN -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">Agenda Rutin</div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-4">Program Rutin & Unggulan</h2>
+        <p class="text-slate-500 max-w-2xl mx-auto">Program pilihan dari setiap bidang untuk pembinaan, dakwah, kreativitas, dan kebersamaan anggota.</p>
+      </div>
+
+      <!-- Program Grid -->
+      <div class="space-y-16" style="display:none;">
+
+        <!-- Spiritual -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-white text-lg">🕌</div>
+            <h3 class="text-xl font-bold text-slate-800">Bidang Spiritual & Keagamaan</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">📖</div>
+                <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">Mingguan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Halaqah Al-Qur'an</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Program tahsin tilawah dan tahfidz Al-Qur'an bersama mentor bersertifikat setiap Sabtu pagi. Target: 1 juz per semester.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 Setiap Sabtu, 07.00–08.30 WIB</div>
+            </div>
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🎤</div>
+                <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">Bulanan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Kajian Tematik Bulanan</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Kajian mendalam dengan tema-tema kontemporer seperti fiqh muamalah, sirah nabawiyah, dan isu-isu keislaman terkini.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 Ahad ke-2, 13.00–15.30 WIB</div>
+            </div>
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🌙</div>
+                <span class="bg-red-700 text-white text-xs font-bold px-2 py-1 rounded-full">Tahunan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Ramadhan Festival</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Sebulan penuh kegiatan: ifthar jama'i, i'tikaf, tadarus bersama, pesantren kilat, dan khataman Al-Qur'an.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 Bulan Ramadhan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intelektual -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-green-800 rounded-xl flex items-center justify-center text-white text-lg">🧠</div>
+            <h3 class="text-xl font-bold text-slate-800">Bidang Intelektual & Kepemimpinan</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-hover bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">💡</div>
+                <span class="bg-green-800 text-white text-xs font-bold px-2 py-1 rounded-full">Semesteran</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">LKMI – Latihan Kader</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Latihan Kader Muslim Indonesia: pelatihan intensif 3 hari untuk mencetak kader penggerak dakwah kampus yang berkarakter.</p>
+              <div class="mt-4 pt-4 border-t border-green-200 text-xs text-green-700 font-medium">📅 Awal Semester Ganjil & Genap</div>
+            </div>
+            <div class="card-hover bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🏕️</div>
+                <span class="bg-green-800 text-white text-xs font-bold px-2 py-1 rounded-full">Tahunan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Dauroh & Rihlah Ilmiah</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Perjalanan belajar dan ziarah ke pesantren atau lembaga Islam ternama, dipadukan dengan refleksi dan pembinaan spiritual.</p>
+              <div class="mt-4 pt-4 border-t border-green-200 text-xs text-green-700 font-medium">📅 Semester Genap</div>
+            </div>
+            <div class="card-hover bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🏆</div>
+                <span class="bg-green-800 text-white text-xs font-bold px-2 py-1 rounded-full">Tahunan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Olimpiade Islam Kampus</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Lomba MTQ, cerdas cermat Islam, kaligrafi, pidato bahasa Arab, dan debat hukum Islam antar jurusan di kampus.</p>
+              <div class="mt-4 pt-4 border-t border-green-200 text-xs text-green-700 font-medium">📅 Maret / Oktober</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sosial -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-white text-lg">❤️</div>
+            <h3 class="text-xl font-bold text-slate-800">Bidang Sosial & Kemasyarakatan</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🤝</div>
+                <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">Semesteran</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Bakti Sosial JNI</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Pembagian sembako, pakaian layak pakai, dan santunan untuk anak yatim dan keluarga prasejahtera di sekitar kampus.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 Akhir Semester</div>
+            </div>
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">📚</div>
+                <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">Mingguan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Bimbel Anak Dhuafa</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Bimbingan belajar gratis untuk anak-anak kurang mampu di sekitar kampus, diajarkan langsung oleh mahasiswa anggota JNI.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 Setiap Ahad, 09.00–11.00 WIB</div>
+            </div>
+            <div class="card-hover bg-orange-50 rounded-2xl p-6 border border-orange-100">
+              <div class="flex items-start justify-between mb-4">
+                <div class="text-3xl">🌿</div>
+                <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">Tahunan</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Kampus Hijau Islam</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Program penanaman pohon, kebersihan lingkungan kampus, dan sosialisasi hidup ramah lingkungan dari perspektif Islam.</p>
+              <div class="mt-4 pt-4 border-t border-orange-200 text-xs text-orange-700 font-medium">📅 April (Hari Bumi)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="program-grid" class="space-y-14"></div>
+    </div>
+  </section>
+
+  <!-- KALENDER INTERAKTIF -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">Jadwal</div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Kalender Program 2026</h2>
+        <p class="text-slate-500 text-sm">Klik tanggal yang ditandai untuk melihat detail kegiatan</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+        <!-- Header Navigasi Bulan -->
+        <div class="bg-orange-600 px-6 py-4 flex items-center justify-between">
+          <button onclick="prevMonth()" style="background:rgba(255,255,255,0.2);border:none;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg style="width:18px;height:18px;color:white;" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <h3 id="cal-title" class="text-white font-bold text-xl"></h3>
+          <button onclick="nextMonth()" style="background:rgba(255,255,255,0.2);border:none;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+            <svg style="width:18px;height:18px;" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Nama Hari -->
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);background:#fff7ed;border-bottom:1px solid #fed7aa;">
+          <div class="text-center py-3 text-xs font-bold text-red-500">Min</div>
+          <div class="text-center py-3 text-xs font-bold text-slate-500">Sen</div>
+          <div class="text-center py-3 text-xs font-bold text-slate-500">Sel</div>
+          <div class="text-center py-3 text-xs font-bold text-slate-500">Rab</div>
+          <div class="text-center py-3 text-xs font-bold text-slate-500">Kam</div>
+          <div class="text-center py-3 text-xs font-bold text-slate-500">Jum</div>
+          <div class="text-center py-3 text-xs font-bold text-orange-600">Sab</div>
+        </div>
+
+        <!-- Grid Kalender -->
+        <div id="cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:#f1f5f9;" class="px-0"></div>
+
+        <!-- Legend -->
+        <div class="px-6 py-4 border-t border-slate-100 flex flex-wrap gap-4">
+          <div class="flex items-center gap-2 text-xs text-slate-500"><span style="width:12px;height:12px;border-radius:50%;background:#16a34a;display:inline-block;"></span> Selesai</div>
+          <div class="flex items-center gap-2 text-xs text-slate-500"><span style="width:12px;height:12px;border-radius:50%;background:#ea580c;display:inline-block;"></span> Berlangsung</div>
+          <div class="flex items-center gap-2 text-xs text-slate-500"><span style="width:12px;height:12px;border-radius:50%;background:#64748b;display:inline-block;"></span> Direncanakan</div>
+        </div>
+      </div>
+
+      <!-- Panel Detail Kegiatan -->
+      <div id="event-panel" style="display:none;" class="mt-6 bg-white rounded-2xl border border-orange-200 shadow-sm overflow-hidden">
+        <div class="bg-orange-50 px-6 py-3 border-b border-orange-100 flex items-center justify-between">
+          <h4 id="event-date-label" class="font-bold text-orange-700 text-sm"></h4>
+          <button onclick="document.getElementById('event-panel').style.display='none'" style="background:none;border:none;cursor:pointer;color:#9ca3af;font-size:18px;">✕</button>
+        </div>
+        <div id="event-list" class="p-6 space-y-4"></div>
+      </div>
+
+      <!-- Daftar Semua Kegiatan Bulan Ini -->
+      <div id="month-events" class="mt-6"></div>
+    </div>
+  </section>
+
+  <script>
+  // ── PROGRAM UNGGULAN PER BIDANG ────────────────────────────────────────────
+  var programUnggulan = [
+    { bidang:'Kader', icon:'🤝', color:'#ea580c', light:'#fff7ed', border:'#fed7aa', programs:[
+      { icon:'🌙', nama:'Mabit Ikhwan', jenis:'Berkala', desc:'Malam bina iman khusus ikhwan untuk memperkuat ruhiyah, ukhuwah, dan karakter kader.', waktu:'Sesuai agenda kaderisasi' },
+      { icon:'📣', nama:'PMDK 1 & 2', jenis:'Semesteran', desc:'Penerimaan dan pembinaan mahasiswa dakwah kampus sebagai pintu awal menjadi anggota UKMI.', waktu:'Awal semester' },
+      { icon:'🧭', nama:'Magang Anggota Baru', jenis:'Pembinaan', desc:'Pendampingan anggota baru agar mengenal budaya organisasi dan peran setiap bidang.', waktu:'Setelah PMDK' }
+    ]},
+    { bidang:'Syiar', icon:'📢', color:'#15803d', light:'#f0fdf4', border:'#bbf7d0', programs:[
+      { icon:'📖', nama:'Tahsin Al-Qur’an', jenis:'Mingguan', desc:'Belajar membaca Al-Qur’an dengan baik dan benar dalam suasana yang hangat dan terarah.', waktu:'Setiap pekan' },
+      { icon:'🎙️', nama:'Kajian Rutin', jenis:'Mingguan', desc:'Kajian keislaman dengan tema yang relevan bagi kehidupan mahasiswa.', waktu:'Setiap pekan' },
+      { icon:'🕌', nama:'Peringatan Hari Besar Islam', jenis:'Tahunan', desc:'Syiar kampus melalui peringatan Maulid Nabi, Isra Mikraj, Iduladha, dan momentum Islam lainnya.', waktu:'Hari besar Islam' }
+    ]},
+    { bidang:'Humas', icon:'🌐', color:'#2563eb', light:'#eff6ff', border:'#bfdbfe', programs:[
+      { icon:'🤲', nama:'Bakti Sosial', jenis:'Sosial', desc:'Aksi kepedulian bersama untuk membantu masyarakat dan mempererat peran sosial UKMI.', waktu:'Sesuai agenda' },
+      { icon:'🚶', nama:'JJB', jenis:'Kebersamaan', desc:'Jalan-jalan berilmu yang memadukan rekreasi, refleksi, dan wawasan keislaman.', waktu:'Berkala' },
+      { icon:'🔗', nama:'Silaturahmi LDK', jenis:'Kemitraan', desc:'Menjalin relasi dan kolaborasi dakwah bersama LDK serta lembaga kampus lainnya.', waktu:'Berkala' }
+    ]},
+    { bidang:'Medcen', icon:'🎨', color:'#7e22ce', light:'#faf5ff', border:'#e9d5ff', programs:[
+      { icon:'📱', nama:'Pengelolaan Media Sosial', jenis:'Harian', desc:'Menyebarkan informasi dan konten dakwah kreatif melalui kanal media sosial UKMI.', waktu:'Setiap hari' },
+      { icon:'🖌️', nama:'Training Desain', jenis:'Pelatihan', desc:'Pelatihan desain untuk meningkatkan keterampilan visual dan publikasi anggota.', waktu:'Berkala' },
+      { icon:'💻', nama:'Website Organisasi', jenis:'Digital', desc:'Pengembangan website sebagai pusat informasi program, struktur organisasi, serta kritik dan saran.', waktu:'Berjalan sepanjang tahun' }
+    ]},
+    { bidang:'Danus', icon:'💼', color:'#a16207', light:'#fefce8', border:'#fde68a', programs:[
+      { icon:'🧥', nama:'Pembuatan Jaket UKMI', jenis:'Produk', desc:'Penyediaan jaket identitas UKMI yang memperkuat rasa memiliki dan kebersamaan anggota.', waktu:'Sesuai kebutuhan' },
+      { icon:'👕', nama:'Baju Polo UKMI', jenis:'Produk', desc:'Produksi baju polo resmi untuk menunjang identitas dan kegiatan organisasi.', waktu:'Sesuai kebutuhan' },
+      { icon:'💐', nama:'Bouquet Wisuda', jenis:'Usaha', desc:'Layanan bouquet wisuda sebagai usaha kreatif untuk mendukung dana kegiatan UKMI.', waktu:'Musim wisuda' }
+    ]},
+    { bidang:'Minbat', icon:'⚽', color:'#0f766e', light:'#f0fdfa', border:'#99f6e4', programs:[
+      { icon:'🏆', nama:'UKMI Cup', jenis:'Tahunan', desc:'Kompetisi olahraga untuk mempererat ukhuwah dan membangun semangat sportivitas anggota.', waktu:'Tahunan' },
+      { icon:'🏹', nama:'Panahan', jenis:'Olahraga', desc:'Latihan panahan untuk kebugaran, fokus, dan meneladani olahraga sunnah.', waktu:'Berkala' },
+      { icon:'🧹', nama:'Resik-resik Masjid', jenis:'Sosial', desc:'Kegiatan menjaga kebersihan dan kenyamanan masjid sebagai bentuk pelayanan jamaah.', waktu:'Berkala' }
+    ]},
+    { bidang:'Keputrian', icon:'🌸', color:'#db2777', light:'#fdf2f8', border:'#fbcfe8', programs:[
+      { icon:'🧕', nama:'GEMAR', jenis:'Kader', desc:'Gerakan Menutup Aurat untuk menguatkan pemahaman dan praktik muslimah dalam berbusana.', waktu:'Berkala' },
+      { icon:'💬', nama:'Mentoring Anggota', jenis:'Pembinaan', desc:'Ruang pendampingan dan berbagi bagi anggota akhwat dalam perjalanan organisasi dan pribadi.', waktu:'Berkala' },
+      { icon:'📚', nama:'Review Buku', jenis:'Minat bakat', desc:'Diskusi buku untuk memperluas wawasan, membangun kebiasaan membaca, dan berbagi inspirasi.', waktu:'Berkala' }
+    ]}
+  ];
+
+  function renderProgramUnggulan() {
+    var container = document.getElementById('program-grid');
+    container.innerHTML = programUnggulan.map(function(group) {
+      var cards = group.programs.map(function(program) {
+        return '<div class="card-hover rounded-2xl p-6 border" style="background:'+group.light+';border-color:'+group.border+';">'
+          + '<div class="flex items-start justify-between mb-4"><div class="text-3xl">'+program.icon+'</div>'
+          + '<span class="text-white text-xs font-bold px-2 py-1 rounded-full" style="background:'+group.color+';">'+program.jenis+'</span></div>'
+          + '<h4 class="font-bold text-slate-800 mb-2">'+program.nama+'</h4>'
+          + '<p class="text-slate-500 text-sm leading-relaxed">'+program.desc+'</p>'
+          + '<div class="mt-4 pt-4 text-xs font-medium" style="border-top:1px solid '+group.border+';color:'+group.color+';">📅 '+program.waktu+'</div></div>';
+      }).join('');
+      return '<div><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-white text-lg" style="background:'+group.color+';">'+group.icon+'</div>'
+        + '<h3 class="text-xl font-bold text-slate-800">Bidang '+group.bidang+'</h3></div>'
+        + '<div class="grid md:grid-cols-3 gap-6">'+cards+'</div></div>';
+    }).join('');
+  }
+
+  renderProgramUnggulan();
+
+  // ── DATA KEGIATAN ──────────────────────────────────────────────────────────
+  var events = [
+    // Format: { year, month (0-indexed), day, name, divisi, icon, desc }.
+    // Properti status lama (jika ada) diabaikan; status dihitung otomatis.
+    { year:2026, month:1,  day:10, name:'LKMI Angkatan XVIII – Hari 1', divisi:'Kaderisasi', status:'selesai', icon:'🌱', desc:'Pembukaan dan materi dasar ke-Islaman' },
+    { year:2026, month:1,  day:11, name:'LKMI Angkatan XVIII – Hari 2', divisi:'Kaderisasi', status:'selesai', icon:'🌱', desc:'Pelatihan kepemimpinan dan outbound' },
+    { year:2026, month:1,  day:12, name:'LKMI Angkatan XVIII – Hari 3', divisi:'Kaderisasi', status:'selesai', icon:'🌱', desc:'Penutupan dan pelantikan kader baru' },
+    { year:2026, month:1,  day:22, name:'Halaqah Al-Qur\'an', divisi:'Keagamaan', status:'selesai', icon:'📖', desc:'Tahsin dan tahfidz rutin bersama ustadz' },
+    { year:2026, month:2,  day:1,  name:'Kajian Tematik: Fiqh Muamalah', divisi:'Keagamaan', status:'selesai', icon:'🎤', desc:'Diskusi hukum Islam dalam transaksi modern' },
+    { year:2026, month:2,  day:15, name:'Pembukaan Ramadhan Festival', divisi:'Keagamaan', status:'selesai', icon:'🌙', desc:'Launching serangkaian kegiatan Ramadhan 2026' },
+    { year:2026, month:2,  day:20, name:'Ifthar Jama\'i Pertama', divisi:'Keagamaan', status:'selesai', icon:'🌙', desc:'Buka puasa bersama seluruh anggota JNI' },
+    { year:2026, month:3,  day:5,  name:'I\'tikaf 10 Malam Terakhir', divisi:'Keagamaan', status:'selesai', icon:'🕌', desc:'Ibadah malam intensif di masjid kampus' },
+    { year:2026, month:3,  day:12, name:'Khataman Al-Qur\'an Bersama', divisi:'Keagamaan', status:'selesai', icon:'📖', desc:'Khatam bersama menjelang akhir Ramadhan' },
+    { year:2026, month:4,  day:5,  name:'Bakti Sosial Semester Genap', divisi:'Sosial', status:'berlangsung', icon:'🤝', desc:'Pembagian sembako dan santunan anak yatim' },
+    { year:2026, month:4,  day:22, name:'Kampus Hijau Islam', divisi:'Sosial', status:'berlangsung', icon:'🌿', desc:'Penanaman pohon dan bersih lingkungan kampus' },
+    { year:2026, month:4,  day:27, name:'Bimbel Anak Dhuafa', divisi:'Sosial', status:'berlangsung', icon:'📚', desc:'Bimbingan belajar gratis rutin setiap Ahad' },
+    { year:2026, month:5,  day:8,  name:'Halaqah Al-Qur\'an', divisi:'Keagamaan', status:'direncanakan', icon:'📖', desc:'Rutin mingguan – tahsin dan tahfidz' },
+    { year:2026, month:5,  day:20, name:'Kajian Tematik: Sirah Nabawiyah', divisi:'Keagamaan', status:'direncanakan', icon:'🎤', desc:'Pembahasan mendalam perjalanan hidup Nabi SAW' },
+    { year:2026, month:6,  day:15, name:'Dauroh Kader Intensif', divisi:'Kaderisasi', status:'direncanakan', icon:'🏕️', desc:'Pelatihan kepribadian dan manajemen diri' },
+
+    { year:2026, month:7,  day:14, name:'Mabit', divisi:'Kaderisasi', icon:'🤝', desc:'Malam Bina Iman' },
+
+    { year:2026, month:7,  day:25, name:'Maulid Nabi', divisi:'Syiar', icon:'🕌', desc:'Maulid Nabi Muhammad SAW' },
+
+    { year:2026, month:6,  day:24, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:7,  day:8, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:7,  day:21, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:8,  day:4, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:8,  day:18, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:9,  day:2, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:9,  day:16, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:9,  day:30, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:10,  day:13, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:10,  day:27, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:11,  day:11, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2026, month:11,  day:25, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2027, month:0,  day:8, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2027, month:0,  day:22, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2027, month:1,  day:12, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+    { year:2027, month:1,  day:26, name:'Tahsin', divisi:'Syiar', icon:'📖', desc:'Tahsin rutin' },
+
+    { year:2026, month:7,  day:5, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:7,  day:12, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2026, month:7,  day:19, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:7,  day:26, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2026, month:8,  day:2, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:8,  day:9, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2026, month:8,  day:16, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:8,  day:23, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2026, month:9,  day:7, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:9,  day:14, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2026, month:9,  day:21, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:9,  day:28, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2026, month:10,  day:4, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:10,  day:11, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2026, month:10,  day:18, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:10,  day:25, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2026, month:11,  day:2, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:11,  day:9, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2026, month:11,  day:16, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2026, month:11,  day:23, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2027, month:0,  day:6, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2027, month:0,  day:13, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2027, month:0,  day:20, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2027, month:0,  day:27, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+    { year:2027, month:1,  day:3, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2027, month:1,  day:10, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Fiqih' },
+    { year:2027, month:1,  day:17, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tematik' },
+    { year:2027, month:1,  day:24, name:'Kajian Rutin', divisi:'Syiar', icon:'🎤', desc:'Kajian Tauhid' },
+
+    { year:2026, month:6,  day:18, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:6,  day:24, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:6,  day:25, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:1, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:7, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:8, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:15, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:21, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:22, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:7,  day:29, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:4, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:5, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:12, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:18, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:19, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:8,  day:26, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:2, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:3, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:10, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:16, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:17, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:24, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:30, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:9,  day:31, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:7, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:13, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:14, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:21, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:27, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:10,  day:28, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:5, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:11, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:12, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:19, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:25, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2026, month:11,  day:16, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:2, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:8, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:9, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:16, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:22, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:0,  day:23, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:6, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:12, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:13, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:20, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:26, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:1,  day:27, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:6, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:12, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:13, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:20, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:26, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:2,  day:27, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:3, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:9, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:10, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:17, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:23, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:3,  day:24, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:1, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:7, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:8, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:15, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:21, name:'Bahasa Arab di Maskam', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:22, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+    { year:2027, month:4,  day:29, name:'Bahasa Arab di TPQ', divisi:'Syiar', icon:'🌱', desc:'Belajar Bahasa Arab' },
+
+    { year:2026, month:6,  day:10, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Volly' },
+    { year:2026, month:6,  day:25, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Badminton' },
+    { year:2026, month:6,  day:26, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Badminton (Akhwat)' },
+    { year:2026, month:7,  day:15, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Futsal & Renang' },
+    { year:2026, month:7,  day:22, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Volley' },
+    { year:2026, month:7,  day:28, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Mini Soccer' },
+    { year:2026, month:8,  day:12, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Badminton' },
+    { year:2026, month:8,  day:26, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Futsal & Renang' },
+    { year:2026, month:8,  day:30, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Mini Soccer' },
+    { year:2026, month:9,  day:10, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Volly' },
+    { year:2026, month:9,  day:24, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Badminton' },
+    { year:2026, month:9,  day:31, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Mini Soccer' },
+    { year:2026, month:10,  day:14, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Futsal & Renang' },
+    { year:2026, month:10,  day:21, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Volly' },
+    { year:2026, month:10,  day:28, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Mini Soccer' },
+    { year:2026, month:11,  day:12, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Badminton' },
+    { year:2026, month:11,  day:19, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Futsal & Renang' },
+    { year:2026, month:11,  day:26, name:'Olahraga Rutin', divisi:'Minbat', icon:'🦾', desc:'Mini Soccer' },
+  ];
+
+  var MONTHS_ID = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  var currentYear = 2026;
+  var currentMonth = new Date().getMonth(); // mulai bulan sekarang
+  if (currentMonth < 0) currentMonth = 0;
+
+  var STATUS_COLOR = { selesai: '#16a34a', berlangsung: '#ea580c', direncanakan: '#64748b' };
+  var STATUS_LABEL = { selesai: '✓ Selesai', berlangsung: '⏳ Berlangsung', direncanakan: '📅 Direncanakan' };
+  var STATUS_BG    = { selesai: '#dcfce7', berlangsung: '#fff7ed', direncanakan: '#f1f5f9' };
+
+  // Status ditentukan otomatis dari tanggal agenda dibandingkan tanggal hari ini.
+  function getEventStatus(event) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    var eventDate = new Date(event.year, event.month, event.day);
+    if (eventDate < today) return 'selesai';
+    if (eventDate > today) return 'direncanakan';
+    return 'berlangsung';
+  }
+
+  function getEventsForDay(y, m, d) {
+    return events.filter(function(e){ return e.year===y && e.month===m && e.day===d; });
+  }
+  function getEventsForMonth(y, m) {
+    return events.filter(function(e){ return e.year===y && e.month===m; });
+  }
+
+  function renderCalendar() {
+    var y = currentYear, m = currentMonth;
+    document.getElementById('cal-title').textContent = MONTHS_ID[m] + ' ' + y;
+
+    var firstDay = new Date(y, m, 1).getDay(); // 0=Sun
+    var daysInMonth = new Date(y, m+1, 0).getDate();
+    var today = new Date();
+
+    var grid = document.getElementById('cal-grid');
+    grid.innerHTML = '';
+
+    // Sel kosong sebelum hari pertama
+    for (var i = 0; i < firstDay; i++) {
+      var blank = document.createElement('div');
+      blank.style.cssText = 'background:#fff;min-height:64px;padding:8px;';
+      grid.appendChild(blank);
+    }
+
+    // Hari-hari dalam bulan
+    for (var d = 1; d <= daysInMonth; d++) {
+      var dayEvents = getEventsForDay(y, m, d);
+      var isToday = (y === today.getFullYear() && m === today.getMonth() && d === today.getDate());
+      var weekday = new Date(y, m, d).getDay();
+      var isSun = weekday === 0;
+      var isSat = weekday === 6;
+
+      var cell = document.createElement('div');
+      cell.style.cssText = 'background:#fff;min-height:64px;padding:8px 6px;position:relative;transition:background 0.15s;cursor:'+(dayEvents.length?'pointer':'default')+';';
+
+      // Nomor hari
+      var numDiv = document.createElement('div');
+      numDiv.style.cssText = 'width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:'+(isToday?'700':'500')+';margin:0 auto 4px;'
+        + (isToday ? 'background:#ea580c;color:#fff;' : (isSun ? 'color:#ef4444;' : isSat ? 'color:#ea580c;' : 'color:#374151;'));
+      numDiv.textContent = d;
+      cell.appendChild(numDiv);
+
+      // Dot / icon event
+      if (dayEvents.length > 0) {
+        var dotsDiv = document.createElement('div');
+        dotsDiv.style.cssText = 'display:flex;flex-wrap:wrap;gap:3px;justify-content:center;';
+        dayEvents.forEach(function(ev) {
+          var status = getEventStatus(ev);
+          var dot = document.createElement('span');
+          dot.style.cssText = 'width:8px;height:8px;border-radius:50%;background:'+STATUS_COLOR[status]+';display:inline-block;flex-shrink:0;';
+          dot.title = ev.name;
+          dotsDiv.appendChild(dot);
+        });
+        cell.appendChild(dotsDiv);
+
+        // Klik → panel detail
+        (function(day, evList) {
+          cell.onclick = function() { showEvents(y, m, day, evList); };
+          cell.onmouseover = function(){ this.style.background='#fff7ed'; };
+          cell.onmouseout  = function(){ this.style.background='#fff'; };
+        })(d, dayEvents);
+      }
+
+      grid.appendChild(cell);
+    }
+
+    // Render daftar kegiatan bulan ini di bawah kalender
+    renderMonthList(y, m);
+  }
+
+  function showEvents(y, m, d, evList) {
+    var panel = document.getElementById('event-panel');
+    var label = document.getElementById('event-date-label');
+    var list  = document.getElementById('event-list');
+
+    label.textContent = d + ' ' + MONTHS_ID[m] + ' ' + y;
+    list.innerHTML = '';
+
+    evList.forEach(function(ev) {
+      var status = getEventStatus(ev);
+      var item = document.createElement('div');
+      item.style.cssText = 'display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:12px;background:'+STATUS_BG[status]+';border-left:4px solid '+STATUS_COLOR[status]+';';
+      item.innerHTML = '<div style="font-size:24px;line-height:1;flex-shrink:0;">'+ev.icon+'</div>'
+        + '<div><div style="font-weight:700;color:#1e293b;font-size:14px;margin-bottom:4px;">'+ev.name+'</div>'
+        + '<div style="font-size:12px;color:#64748b;margin-bottom:6px;">'+ev.divisi+'</div>'
+        + '<div style="font-size:12px;color:#475569;">'+ev.desc+'</div>'
+        + '<span style="display:inline-block;margin-top:8px;font-size:11px;font-weight:700;padding:2px 10px;border-radius:999px;background:'+STATUS_COLOR[status]+';color:#fff;">'+STATUS_LABEL[status]+'</span>'
+        + '</div>';
+      list.appendChild(item);
+    });
+
+    panel.style.display = 'block';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function renderMonthList(y, m) {
+    var monthEvs = getEventsForMonth(y, m);
+    // Agenda yang belum selesai tampil lebih dulu (tanggal terdekat di atas).
+    // Agenda selesai dipindahkan ke bawah, dengan yang paling baru selesai di atas.
+    monthEvs.sort(function(a, b) {
+      var aSelesai = getEventStatus(a) === 'selesai';
+      var bSelesai = getEventStatus(b) === 'selesai';
+      var aDate = new Date(a.year, a.month, a.day);
+      var bDate = new Date(b.year, b.month, b.day);
+
+      if (aSelesai !== bSelesai) return aSelesai ? 1 : -1;
+      return aSelesai ? bDate - aDate : aDate - bDate;
+    });
+
+    var container = document.getElementById('month-events');
+    container.innerHTML = '';
+    if (monthEvs.length === 0) {
+      container.innerHTML = '<p class="text-center text-slate-400 text-sm py-4">Tidak ada kegiatan terjadwal bulan ini.</p>';
+      return;
+    }
+
+    var title = document.createElement('h4');
+    title.style.cssText = 'font-weight:700;color:#374151;margin-bottom:12px;font-size:14px;';
+    title.textContent = 'Kegiatan ' + MONTHS_ID[m] + ' ' + y + ' (' + monthEvs.length + ' agenda)';
+    container.appendChild(title);
+
+    var grid = document.createElement('div');
+    grid.style.cssText = 'display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));';
+
+    monthEvs.forEach(function(ev) {
+      var status = getEventStatus(ev);
+      var card = document.createElement('div');
+      card.style.cssText = 'background:#fff;border-radius:14px;padding:14px;border-left:4px solid '+STATUS_COLOR[status]+';box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;gap:12px;align-items:flex-start;';
+      card.innerHTML = '<div style="font-size:22px;line-height:1;flex-shrink:0;">'+ev.icon+'</div>'
+        + '<div><div style="font-size:11px;font-weight:700;color:'+STATUS_COLOR[status]+';margin-bottom:3px;">'+ev.day+' '+MONTHS_ID[m]+' · '+ev.divisi+'</div>'
+        + '<div style="font-weight:600;color:#1e293b;font-size:13px;margin-bottom:3px;">'+ev.name+'</div>'
+        + '<div style="font-size:12px;color:#64748b;">'+ev.desc+'</div></div>';
+      grid.appendChild(card);
+    });
+
+    container.appendChild(grid);
+  }
+
+  function prevMonth() {
+    currentMonth--;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    document.getElementById('event-panel').style.display = 'none';
+    renderCalendar();
+  }
+  function nextMonth() {
+    currentMonth++;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    document.getElementById('event-panel').style.display = 'none';
+    renderCalendar();
+  }
+
+  // Init
+  renderCalendar();
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-800 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-lg"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+            <div><div class="font-bold text-lg">UKMI JNI</div><div class="text-green-300 text-sm">Jama'ah Nurul Iman</div></div>
+          </div>
+          <p class="text-green-300 text-sm leading-relaxed max-w-xs">Organisasi mahasiswa Islam yang berkomitmen mencetak generasi unggul berakhlak mulia untuk kemajuan umat dan bangsa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Navigasi</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="program.html" class="hover:text-white transition">Program Kerja</a></li>
+            <li><a href="album.html" class="hover:text-white transition">Dokumentasi</a></li>
+            <li><a href="struktur.html" class="hover:text-white transition">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Kontak</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li>📧 ukmijni98@gmail.com</li>
+            <li>📱 +62 822-8663-0659</li>
+            <li>📍 Gedung SC Lt. 2 INSTIPER Yogyakarta</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-green-400 text-sm">© 2026 UKMI Jama'ah Nurul Iman. Hak Cipta Dilindungi.</p>
+        <p class="text-green-500 text-xs">Semoga Allah merahmati setiap langkah dakwah kita.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

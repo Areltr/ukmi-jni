@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak – UKMI Jama'ah Nurul Iman</title>
+  <meta name="description" content="Hubungi UKMI JNI untuk informasi keanggotaan, kerjasama, atau kritik dan saran. Kami siap merespons dengan cepat." />
+  <meta property="og:title" content="Kontak UKMI JNI" />
+  <meta property="og:description" content="Hubungi UKMI Jama'ah Nurul Iman untuk informasi lebih lanjut." />
+  <meta property="og:image" content="https://placehold.co/1200x630/ea580c/ffffff?text=Kontak+UKMI+JNI" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .section-badge { background: linear-gradient(90deg, #ea580c, #f97316); }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #fed7aa; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #ea580c; box-shadow: 0 0 0 3px rgba(234,88,12,0.15); }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      var isHidden = menu.style.display === 'none' || menu.style.display === '';
+      menu.style.display = isHidden ? 'block' : 'none';
+      iconOpen.style.display = isHidden ? 'none' : 'block';
+      iconClose.style.display = isHidden ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body class="bg-orange-50 text-slate-800">
+
+  <!-- NAVBAR -->
+  <nav class="bg-orange-600 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+          <div><div class="text-white font-bold text-base leading-tight">UKMI JNI</div><div class="text-orange-200 text-xs">Jama'ah Nurul Iman</div></div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-orange-100 text-sm">Beranda</a>
+          <a href="about.html" class="nav-link text-orange-100 text-sm">Tentang</a>
+          <a href="program.html" class="nav-link text-orange-100 text-sm">Program</a>
+          <a href="album.html" class="nav-link text-orange-100 text-sm">Dokumentasi</a>
+          <a href="struktur.html" class="nav-link text-orange-100 text-sm">Struktur</a>
+          <a href="kontak.html" class="bg-white text-orange-600 font-semibold text-sm px-4 py-2 rounded-full">Kontak</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden text-white p-2">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" style="display:none;" class="md:hidden bg-orange-700 px-4 pb-4 pt-2 space-y-2">
+      <a href="index.html" class="block text-orange-100 py-2 border-b border-orange-500">Beranda</a>
+      <a href="about.html" class="block text-orange-100 py-2 border-b border-orange-500">Tentang</a>
+      <a href="program.html" class="block text-orange-100 py-2 border-b border-orange-500">Program</a>
+      <a href="album.html" class="block text-orange-100 py-2 border-b border-orange-500">Dokumentasi</a>
+      <a href="struktur.html" class="block text-orange-100 py-2 border-b border-orange-500">Struktur</a>
+      <a href="kontak.html" class="block text-white font-semibold py-2">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-orange-600 to-green-800 py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm px-4 py-2 rounded-full mb-4">📬 Hubungi Kami</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Kontak & Lokasi</h1>
+      <p class="text-orange-100 text-lg">Kami senang mendengar dari kamu — baik untuk bergabung, kerjasama, maupun saran.</p>
+    </div>
+  </section>
+
+  <!-- KONTAK INFO + FORM -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16">
+
+        <!-- Info Kontak -->
+        <div>
+          <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">Info Kontak</div>
+          <h2 class="text-3xl font-bold text-slate-800 mb-6">Temukan Kami</h2>
+
+          <div class="space-y-5 mb-10">
+            <div class="flex items-start gap-4 bg-orange-50 rounded-2xl p-5 border border-orange-100">
+              <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-800 mb-1">Sekretariat</div>
+                <p class="text-slate-500 text-sm">Gedung Student Center Lantai 2<br>INSTIPER Yogyakarta – Jl. Nangka II, Maguwoharjo, Kec. Depok, <br>Kab. Sleman, DI Yogyakarta</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 bg-green-50 rounded-2xl p-5 border border-green-100">
+              <div class="w-12 h-12 bg-green-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-800 mb-1">Email</div>
+                <p class="text-slate-500 text-sm">ukmijni98@gmail.com</p>
+                <p class="text-slate-400 text-xs mt-1">Balas dalam 1×24 jam kerja</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 bg-orange-50 rounded-2xl p-5 border border-orange-100">
+              <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-800 mb-1">WhatsApp</div>
+                <p class="text-slate-500 text-sm">+62 819-3470-3274</p>
+                <p class="text-slate-400 text-xs mt-1">Senin–Jumat, 08.00–17.00 WIB</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 bg-green-50 rounded-2xl p-5 border border-green-100">
+              <div class="w-12 h-12 bg-green-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-800 mb-1">Instagram</div>
+                <p class="text-slate-500 text-sm">@ukmi_jni</p>
+                <p class="text-slate-400 text-xs mt-1">Follow untuk info terbaru kegiatan kami</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jam Sekretariat -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Jam Buka Sekretariat
+            </h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between"><span class="text-slate-600">Senin – Kamis</span><span class="font-semibold text-slate-800">08.00 – 17.00 WIB</span></div>
+              <div class="flex justify-between"><span class="text-slate-600">Jumat</span><span class="font-semibold text-slate-800">08.00 – 11.30 WIB</span></div>
+              <div class="flex justify-between"><span class="text-slate-600">Sabtu</span><span class="font-semibold text-slate-800">09.00 – 13.00 WIB</span></div>
+              <div class="flex justify-between"><span class="text-slate-600">Ahad / Libur</span><span class="font-semibold text-red-600">Tutup</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Kritik & Saran -->
+        <div id="form-wrapper">
+          <div class="inline-flex items-center gap-2 section-badge text-white text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">Pesan & Saran</div>
+          <h2 class="text-3xl font-bold text-slate-800 mb-6">Kirim Pesan</h2>
+
+          <div id="success-msg" style="display:none;" class="bg-green-50 border border-green-200 rounded-2xl p-6 text-center mb-6">
+            <div class="text-4xl mb-3">✅</div>
+            <h3 class="font-bold text-green-800 mb-1">Pesan Terkirim!</h3>
+            <p class="text-green-600 text-sm">Jazakallahu khairan. Kami akan merespons segera.</p>
+          </div>
+
+          <form id="contact-form" action="https://formspree.io/f/xjgnqzyl" method="POST" class="space-y-5">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap <span class="text-red-500">*</span></label>
+                <input type="text" name="nama" placeholder="Arel" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-white transition">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-1.5">Jurusan / Instansi</label>
+                <input type="text" name="instansi" placeholder="Teknologi Hasil Pertanian" class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-white transition">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-1.5">Email <span class="text-red-500">*</span></label>
+              <input type="email" name="email" placeholder="email@kampus.ac.id" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-white transition">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-1.5">Keperluan</label>
+              <select name="keperluan" class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-white transition text-slate-600">
+                <option value="">-- Pilih keperluan --</option>
+                <option>Informasi Keanggotaan</option>
+                <option>Kerjasama Kegiatan</option>
+                <option>Kritik & Saran</option>
+                <option>Pertanyaan Umum</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-1.5">Pesan <span class="text-red-500">*</span></label>
+              <textarea name="pesan" rows="5" placeholder="Tuliskan pesan, pertanyaan, atau saran kamu di sini..." required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-white transition resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-orange-600 text-white font-bold py-3.5 rounded-xl hover:bg-orange-700 transition flex items-center justify-center gap-2 shadow-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              Kirim Pesan
+            </button>
+            <p class="text-slate-400 text-xs text-center">Dengan mengirim pesan, kamu menyetujui bahwa data kamu digunakan hanya untuk keperluan komunikasi dengan UKMI JNI.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPS PLACEHOLDER
+  <section class="bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-xl font-bold text-slate-800 mb-4">📍 Lokasi Sekretariat</h2>
+      <div class="w-full h-80 bg-gradient-to-br from-green-200 to-orange-100 rounded-3xl flex items-center justify-center border border-slate-200 shadow-inner">
+        <div class="text-center">
+          <div class="text-5xl mb-3">🗺️</div>
+          <p class="font-bold text-slate-700">Gedung UKM Lantai 2 – Kampus Utama</p>
+          <p class="text-slate-500 text-sm mt-1">Jl. Pendidikan No. 1, Semarang, Jawa Tengah</p>
+          <a href="https://maps.google.com" target="_blank" class="mt-4 inline-block bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange-700 transition">Buka di Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- FOOTER -->
+  <footer class="bg-green-800 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center font-bold text-lg"><img src="./assets/logo-ukmi.png" alt="UKMI JNI Logo" class="w-10 h-10"></div>
+            <div><div class="font-bold text-lg">UKMI JNI</div><div class="text-green-300 text-sm">Jama'ah Nurul Iman</div></div>
+          </div>
+          <p class="text-green-300 text-sm leading-relaxed max-w-xs">Organisasi mahasiswa Islam yang berkomitmen mencetak generasi unggul berakhlak mulia untuk kemajuan umat dan bangsa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Navigasi</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="about.html" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="program.html" class="hover:text-white transition">Program Kerja</a></li>
+            <li><a href="album.html" class="hover:text-white transition">Dokumentasi</a></li>
+            <li><a href="struktur.html" class="hover:text-white transition">Struktur Organisasi</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-orange-300">Kontak</h4>
+          <ul class="space-y-2 text-green-300 text-sm">
+            <li>📧 ukmijni98@gmail.com</li>
+            <li>📱 +62 822-8663-0659</li>
+            <li>📍 Gedung SC Lt. 2 INSTIPER Yogyakarta</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-green-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-green-400 text-sm">© 2026 UKMI Jama'ah Nurul Iman. Hak Cipta Dilindungi.</p>
+        <p class="text-green-500 text-xs">Semoga Allah merahmati setiap langkah dakwah kita.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      var form = event.currentTarget;
+
+      if (form.action.indexOf('GANTI_DENGAN_FORM_ID') !== -1) {
+        alert('Masukkan Form ID dari dashboard Formspree terlebih dahulu.');
+        return;
+      }
+
+      var button = form.querySelector('button[type="submit"]');
+      var buttonText = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Mengirim...';
+
+      try {
+        var response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Gagal mengirim pesan.');
+        form.style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+        form.reset();
+      } catch (error) {
+        alert('Pesan belum terkirim. Silakan coba lagi beberapa saat.');
+        button.disabled = false;
+        button.textContent = buttonText;
+      }
+    });
+  </script>
+</body>
+</html>
