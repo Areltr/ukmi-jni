@@ -46,9 +46,9 @@
         </a>
         <div class="hidden md:flex items-center gap-6">
           <a href="https://ukmi-jni.web.id/beranda" class="nav-link text-orange-100 text-sm">Beranda</a>
-          <a href="https://ukmi-jni.web.id/tentang" class="nav-link text-white font-semibold text-sm border-b-2 border-white pb-0.5">Tentang</a>
+          <a href="https://ukmi-jni.web.id/tentang" class="nav-link text-orange-100 text-sm">Tentang</a>
           <a href="https://ukmi-jni.web.id/program" class="nav-link text-orange-100 text-sm">Program</a>
-          <a href="https://ukmi-jni.web.id/album" class="nav-link text-orange-100 text-sm">Album</a>
+          <a href="https://ukmi-jni.web.id/album" class="nav-link text-white font-semibold text-sm border-b-2 border-white pb-0.5">Album</a>
           <a href="https://ukmi-jni.web.id/struktur" class="nav-link text-orange-100 text-sm">Struktur</a>
           <a href="https://ukmi-jni.web.id/kontak" class="bg-white text-orange-600 font-semibold text-sm px-4 py-2 rounded-full hover:bg-orange-50 transition">Kontak</a>
         </div>
@@ -122,10 +122,11 @@
   ];
 
   var galleryData = [
-    { cat:'kader', emoji:'🌙', label:'Kader', bg:'#9a3412', title:'Mabit Ikhwan', sub:'Malam bina iman untuk penguatan ruhiyah dan ukhuwah kader' },
+    { cat:'kader', emoji:'🌙', label:'Kader', bg:'#9a3412', image:'./assets/mabit.jpg', link:'https://drive.google.com/drive/u/2/folders/1wmn_4IzySM9Kis5ZRK-6tsjQ09emSg9p', title:'Mabit Ikhwan', sub:'Malam bina iman untuk penguatan ruhiyah dan ukhuwah kader' },
     { cat:'kader', emoji:'📣', label:'Kader', bg:'#c2410c', title:'PMDK 1 & 2', sub:'Penerimaan dan pembinaan mahasiswa dakwah kampus' },
-    { cat:'syiar', emoji:'📖', label:'Syiar', bg:'#166534', title:'Tahsin Al-Qur’an', sub:'Belajar membaca Al-Qur’an dengan baik dan benar' },
-    { cat:'syiar', emoji:'🎙️', label:'Syiar', bg:'#15803d', title:'Kajian Rutin', sub:'Kajian keislaman untuk mahasiswa setiap pekan' },
+    { cat:'syiar', emoji:'📖', label:'Syiar', bg:'#166534', title:'Tahsin Al-Qur’an', image:'./assets/tahsin.jpeg', link:'https://drive.google.com/drive/u/2/folders/1Z_n2iRaNAmd7tuK-iXkvE87Y5YcALF6_', sub:'Belajar membaca Al-Qur’an dengan baik dan benar' },
+    { cat:'syiar', emoji:'📖', label:'Syiar', bg:'#166534', title:'Forum Bahasa Arab', image:'./assets/bahasa-arab.JPG', link:'https://drive.google.com/drive/u/2/folders/15vXHWgFE68T8OPXtiwYQrlQ_CQ7Dub2l', sub:'Belajar bahasa Arab dengan aktif' },
+    { cat:'syiar', emoji:'🎙️', label:'Syiar', bg:'#15803d', title:'Kajian Rutin', image:'./assets/kajian-rutin.JPG', link:'https://drive.google.com/drive/u/2/folders/18AQquAQvBxOcbMUxfJC0ugbhTeyLGcY8', sub:'Kajian keislaman untuk mahasiswa setiap pekan' },
     { cat:'humas', emoji:'🤲', label:'Humas', bg:'#1d4ed8', title:'Bakti Sosial', sub:'Aksi kepedulian untuk masyarakat sekitar' },
     { cat:'humas', emoji:'🚶', label:'Humas', bg:'#2563eb', title:'JJB (Jalan-jalan Berilmu)', sub:'Kebersamaan anggota yang memadukan rekreasi dan wawasan' },
     { cat:'medcen', emoji:'📱', label:'Medcen', bg:'#7e22ce', title:'Pengelolaan Media Sosial', sub:'Dokumentasi dan konten dakwah kreatif UKMI' },
@@ -133,6 +134,7 @@
     { cat:'danus', emoji:'🧥', label:'Danus', bg:'#a16207', title:'Pembuatan Jaket UKMI', sub:'Produksi jaket identitas organisasi' },
     { cat:'danus', emoji:'💐', label:'Danus', bg:'#ca8a04', title:'Bouquet Wisuda', sub:'Usaha kreatif untuk mendukung dana kegiatan UKMI' },
     { cat:'minbat', emoji:'🏆', label:'Minbat', bg:'#0f766e', title:'UKMI Cup', sub:'Kompetisi olahraga dan kebersamaan anggota' },
+    { cat:'minbat', emoji:'⚽', label:'Minbat', bg:'#0f766e', image:'./assets/olahraga-rutin.jpg', link:'https://drive.google.com/drive/u/2/folders/1_X_53xsZGl3iAXAn3n53Lz3cosh-PIvg', title:'Olahraga Rutin', sub:'Kegiatan olahraga rutin untuk menjaga kebugaran dan mempererat ukhuwah anggota' },
     { cat:'minbat', emoji:'🏹', label:'Minbat', bg:'#0d9488', title:'Panahan', sub:'Latihan olahraga sunnah untuk anggota UKMI' },
     { cat:'keputrian', emoji:'🧕', label:'Keputrian', bg:'#be185d', title:'GEMAR', sub:'Gerakan Menutup Aurat bagi muslimah kampus' },
     { cat:'keputrian', emoji:'💬', label:'Keputrian', bg:'#db2777', title:'Mentoring Anggota', sub:'Ruang pendampingan dan berbagi untuk anggota akhwat' },
@@ -152,10 +154,18 @@
       card.style.cssText = 'border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;';
       card.onmouseover = function(){ this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.13)'; };
       card.onmouseout  = function(){ this.style.transform='translateY(0)';    this.style.boxShadow='0 2px 8px rgba(0,0,0,0.07)'; };
+      if (item.link) {
+        card.setAttribute('role', 'link');
+        card.setAttribute('tabindex', '0');
+        card.onclick = function(){ window.open(item.link, '_blank', 'noopener,noreferrer'); };
+        card.onkeydown = function(event){ if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); card.click(); } };
+      }
       card.innerHTML =
         '<div style="height:180px;background:'+item.bg+';display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;">'+
-          '<span style="font-size:52px;line-height:1;">'+item.emoji+'</span>'+
-          '<span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:2px;">'+item.label+'</span>'+
+          (item.image
+            ? '<img src="'+item.image+'" alt="'+item.title+'" style="width:100%;height:100%;object-fit:cover;">'
+            : '<span style="font-size:52px;line-height:1;">'+item.emoji+'</span>'+
+              '<span style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:2px;">'+item.label+'</span>')+
           '<div style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.15);border-radius:999px;padding:3px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.9);">📷 Foto</div>'+
         '</div>'+
         '<div style="padding:14px 16px;">'+
